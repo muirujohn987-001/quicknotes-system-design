@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #f3f6fb;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.site-header {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+    background: #1d4ed8;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.site-header p {
+    margin-bottom: 0;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 2rem auto;
+}
+
+.notes-section,
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: #1d4ed8;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #1e40af;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+.status {
+    min-height: 1.5rem;
+    padding: 0.65rem;
+    border-radius: 6px;
+    background: #f3f4f6;
+}
+
+.status.success {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.status.error {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+.status.loading {
+    color: #1e40af;
+    background: #dbeafe;
+}
+
+#notes-list {
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.note-item {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.note-item h3 {
+    margin-top: 0;
+}
+
+.note-item p {
+    white-space: pre-wrap;
+}
+
+.delete-btn {
+    background: #b91c1c;
+}
+
+.delete-btn:hover:not(:disabled) {
+    background: #991b1b;
+}
+
+.empty-state {
+    padding: 1rem;
+    color: #64748b;
+    text-align: center;
+}
+
+footer {
+    padding: 1rem;
+    color: #64748b;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .section-heading button {
+        width: 100%;
+    }
+
+    .notes-section,
+    .form-section {
+        padding: 1rem;
+    }
+}

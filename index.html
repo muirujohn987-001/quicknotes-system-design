@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickNotes — a simple notes application.">
+    <title>QuickNotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>QuickNotes</h1>
+        <p>Your thoughts, organized.</p>
+    </header>
+
+    <main class="container">
+        <section class="notes-section" aria-labelledby="notes-heading">
+            <div class="section-heading">
+                <h2 id="notes-heading">Your Notes</h2>
+                <button id="load-btn" type="button">Load notes</button>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite">
+                Click "Load notes" to retrieve your notes.
+            </p>
+
+            <ul id="notes-list" aria-label="Notes list"></ul>
+        </section>
+
+        <section class="form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading">Create a Note</h2>
+
+            <form id="note-form">
+                <div class="form-group">
+                    <label for="title-input">Title</label>
+                    <input
+                        type="text"
+                        id="title-input"
+                        name="title"
+                        maxlength="100"
+                        required
+                        placeholder="Enter a note title"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="body-input">Note body (optional)</label>
+                    <textarea
+                        id="body-input"
+                        name="body"
+                        rows="5"
+                        placeholder="Write your note here..."
+                    ></textarea>
+                </div>
+
+                <button id="submit-btn" type="submit">Create note</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>QuickNotes — learning REST API integration.</p>
+    </footer>
+</body>
+</html>
