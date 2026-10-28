@@ -105,7 +105,7 @@ This estimate excludes database indexes, backups, replicas, attachments, logs, a
                  [ Primary Database ]
                            |
                     [ Read Replica ]
-                           
+                
             Application Servers
                     |
                [ Message Queue ]
